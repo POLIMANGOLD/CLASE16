@@ -1,0 +1,56 @@
+<h1 mat-dialog-title> ABM alumnos</h1>
+<div mat-dialog-content>
+  <form [formGroup]="alumnosForm">
+
+    
+   
+
+    <div class="field">
+        <mat-form-field class="w-full">
+            <mat-label>Nombre</mat-label>
+            <input
+               [formControl]="nombreControl"
+               type="text"
+               matInput>
+
+          <mat-error> Este campo es Requerido</mat-error>
+        </mat-form-field><br/>
+    </div>
+   
+
+    <mat-form-field class="w-full">
+        <mat-label>Apellido</mat-label>
+        <input 
+           [formControl]="apellidoControl" 
+           type="text" 
+           matInput>
+      <mat-error> Este campo es Requerido</mat-error>
+    </mat-form-field><br/>
+
+
+    <mat-form-field class="w-full">
+        <mat-label>Curso</mat-label>
+        <input 
+           [formControl]="cursoControl" 
+           type="text" 
+           matInput>
+      <mat-error> Este campo es Requerido</mat-error>
+    </mat-form-field><br/>
+
+
+    <mat-form-field class="w-full">
+        <mat-label>Carrera</mat-label>
+        <input 
+           [formControl]="carreraControl" 
+           type="text" 
+           matInput>
+       <mat-error> Este campo es Requerido</mat-error>
+    </mat-form-field><br/>
+  </form>
+</div>
+
+<div mat-dialog-actions>
+    <button  mat-button mat-dialog-close="">Cancelar</button>
+    <button mat-button (click)="guardar()">Confirmar</button>
+</div>
+

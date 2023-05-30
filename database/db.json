@@ -1,0 +1,40 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Paula",
+      "apellido": "Baez",
+      "email": "paula@mail.com",
+      "password": "12345",
+      "token": "dsfsdf",
+      "user": "admin"
+    },
+    {
+      "id": 2,
+      "nombre": "Leo",
+      "apellido": "Baez",
+      "email": "leo@mail.com",
+      "password": "12345",
+      "token": "defssdf",
+      "user": "admin"
+    },
+    {
+      "id": 3,
+      "nombre": "Nico",
+      "apellido": "Baez",
+      "email": "nico@mail.com",
+      "password": "12345",
+      "token": "ohihoi",
+      "user": "admin"
+    },
+    {
+      "nombre": "Amadeo",
+      "apellido": "Baez",
+      "email": "franco@mail.com",
+      "password": "12345",
+      "token": "sdfsdf",
+      "user": "admin",
+      "id": 4
+    }
+  ]
+}
