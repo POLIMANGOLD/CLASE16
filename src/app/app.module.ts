@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { actionReducerMap } from './store';
+import { EffectsModule } from '@ngrx/effects';
 
 
 
@@ -31,6 +32,7 @@ import { actionReducerMap } from './store';
     HttpClientModule,
     StoreModule.forRoot(actionReducerMap, {}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
+    EffectsModule.forRoot([]),
     
   
     

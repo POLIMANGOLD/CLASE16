@@ -13,6 +13,7 @@ import { AlumnosComponent } from 'src/app/alumnos/alumnos.component';
 import { AlumnosDetalleComponent } from 'src/app/alumnos/pages/alumnos-detalle/alumnos-detalle.component';
 import { CursosComponent } from 'src/app/cursos/cursos.component';
 import { PagescursosDetallesComponent } from 'src/app/cursos/pagescursos-detalles/pagescursos-detalles.component';
+import { InscripcionesComponent } from 'src/app/inscripciones/inscripciones.component';
 
 
 
@@ -60,6 +61,17 @@ MatSidenavModule
     
        ]
      },
+     
+     {
+      path: 'inscripciones',
+      children:[{
+        path: '',
+        component: InscripcionesComponent,
+     },
+  
+  
+     ]
+     }
 
     ])
     
