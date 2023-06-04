@@ -8,13 +8,13 @@ import { MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./abm-cursos.component.scss']
 })
 export class AbmCursosComponent {
-  nombreControl= new FormControl('',[Validators.required, Validators.minLength(3)])
+ 
   fechaIniControl= new FormControl("",[Validators.required])
   fechaFinControl= new FormControl("",[Validators.required])
  
 
   cursosForm = new FormGroup({
-    nombre: this.nombreControl,
+  
     fechaIni: this.fechaIniControl,
     fechaFin: this.fechaFinControl
     

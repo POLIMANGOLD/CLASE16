@@ -22,7 +22,7 @@ export class CursosComponent implements OnInit{
 
 
 
- displayedColumns = ['id','nombre','fechaIni','fechaFin','eliminar', 'ver_detalle'];
+ displayedColumns = ['id','materia','fechaIni','fechaFin','eliminar', 'ver_detalle'];
 
   ngOnInit(): void {
     this.cursoService.obtenerCursos()

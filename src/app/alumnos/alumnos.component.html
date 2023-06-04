@@ -32,16 +32,12 @@
 
 
 <!-- Weight Column -->
-<ng-container matColumnDef="curso">
-  <th mat-header-cell *matHeaderCellDef> Curso </th>
-  <td mat-cell *matCellDef="let estudiante"> {{estudiante.curso}} </td>
+<ng-container matColumnDef="fechaRegistro">
+  <th mat-header-cell *matHeaderCellDef> Fecha de Registro </th>
+  <td mat-cell *matCellDef="let estudiante"> {{estudiante.fechaRegistro| date: 'dd/MM/YYYY' }} </td>
 </ng-container>
 
-  <!-- Symbol Column -->
-  <ng-container matColumnDef="carrera">
-    <th mat-header-cell *matHeaderCellDef> Carrera </th>
-    <td mat-cell *matCellDef="let estudiante"> {{estudiante.carrera}} </td>
-  </ng-container>
+ 
 
    <!-- Position Column -->
    <ng-container matColumnDef="ver_detalle">

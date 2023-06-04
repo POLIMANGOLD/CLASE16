@@ -13,8 +13,7 @@ export interface Alumnos {
   id:number;
   nombre: string;
   apellido: string;
-  curso: number;
-  carrera: string
+ fechaRegistro: Date,
 }
 @Component({
   selector: 'app-alumnos',
@@ -27,7 +26,7 @@ export class AlumnosComponent {
 
 dataSource= new MatTableDataSource <Alumnos>
 
-displayedColumns: string [] = [ "id" , "nombreCompleto", "curso", "carrera", "eliminar", "ver_detalle"]
+displayedColumns: string [] = [ "id" , "nombreCompleto", "fechaRegistro", "eliminar", "ver_detalle"]
 
 horaActual$: Observable <String>;
 

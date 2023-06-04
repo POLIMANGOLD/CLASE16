@@ -9,6 +9,9 @@ import { inscripcionesFeature } from './store/inscripciones.reducer';
 
 
 
+
+
+
 @NgModule({
   declarations: [
     InscripcionesComponent
@@ -17,7 +20,7 @@ import { inscripcionesFeature } from './store/inscripciones.reducer';
     CommonModule,
     InscripcionesRoutingModule,
     EffectsModule.forFeature([InscripcionesEffects]),
-    StoreModule.forFeature (inscripcionesFeature)
+    StoreModule.forFeature (inscripcionesFeature),  
   ]
 })
 export class InscripcionesModule { }

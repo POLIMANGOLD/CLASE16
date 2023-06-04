@@ -29,25 +29,15 @@
 
 
     <mat-form-field class="w-full">
-        <mat-label>Curso</mat-label>
+        <mat-label>Fecha de Registro</mat-label>
         <input 
-           [formControl]="cursoControl" 
-           type="text" 
+           [formControl]="fechaRegistroControl" 
+           type="date" 
            matInput>
       <mat-error> Este campo es Requerido</mat-error>
     </mat-form-field><br/>
 
 
-    <mat-form-field class="w-full">
-        <mat-label>Carrera</mat-label>
-        <input 
-           [formControl]="carreraControl" 
-           type="text" 
-           matInput>
-       <mat-error> Este campo es Requerido</mat-error>
-    </mat-form-field><br/>
-  </form>
-</div>
 
 <div mat-dialog-actions>
     <button  mat-button mat-dialog-close="">Cancelar</button>

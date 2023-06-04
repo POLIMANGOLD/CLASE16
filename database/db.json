@@ -41,23 +41,23 @@
   "courses": [
     {
       "id": 1,
-      "subjectid": 1,
-      "fechaIni": "2023-06-02T021:27:59.631Z",
-      "fechaFin": "2023-08-10T021:27:59.631Z"
+      "subjectId": 1,
+      "fechaIni": "2023-06-02T01:27:59.631Z",
+      "fechaFin": "2023-08-10T01:27:59.631Z"
      
     },
     {
       "id": 2,
-      "subjectid": 2,
-      "fechaIni": "2023-06-02T021:27:59.631Z",
-      "fechaFin": "2023-08-10T021:27:59.631Z"
+      "subjectId": 2,
+      "fechaIni": "2023-06-02T01:27:59.631Z",
+      "fechaFin": "2023-08-10T01:27:59.631Z"
     },
 
     {
       "id": 3,
-      "subjectid": 3,
-      "fechaIni": "2023-06-02T021:27:59.631Z",
-      "fechaFin": "2023-08-10T021:27:59.631Z"
+      "subjectId": 3,
+      "fechaIni": "2023-06-02T01:27:59.631Z",
+      "fechaFin": "2023-08-10T01:27:59.631Z"
     }
   ],
 
@@ -65,19 +65,19 @@
     {
       "id": 1,
       "nombre": "Angular",
-      "descripcion": "Curso de Angular"
+      "description": "Curso de Angular"
      
     },
     {
       "id": 2,
       "nombre": "Java",
-      "descripcion": "Curso de Java"
+      "description": "Curso de Java"
     },
 
     {
       "id": 3,
       "nombre": "CSS",
-      "descripcion": "Curso de CSS"
+      "description": "Curso de CSS"
     }
   ],
 
@@ -107,13 +107,13 @@
       "id": 1,
       "nombre": "Paula",
       "apellido": "Mangold",
-      "fecha_registro": "2023-06-05T01:27:59.631Z"
+      "fechaRegistro": "2023-06-05T01:27:59.631Z"
     },
     {
       "id": 2,
       "nombre": "Omar",
       "apellido": "Perez",
-      "fecha_registro": "2023-05-15T01:27:59.631Z"
+      "fechaRegistro": "2023-05-15T01:27:59.631Z"
     }
   ]
 }
