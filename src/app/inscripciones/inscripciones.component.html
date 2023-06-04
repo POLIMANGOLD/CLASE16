@@ -1,5 +1,18 @@
 <p *ngIf="(state$|async)?.loading"> CARGANDO DATA...</p>
 
-<pre #ifNotLoading>
-    {{ (state$ | async)?.inscripciones | json }}
-</pre>
+<div #ifNotLoading>
+
+    <ul>
+        <li *ngFor="let inscripciones of ( state$ | async )?.inscripciones">
+            {{ inscripciones.student.nombre + '  -  ' + inscripciones.subject.nombre + '  -  ' + (inscripciones.course.fechaIni | date:'dd/MM/YYYY')}} 
+         <button  (click)="eliminarInscripcionPorId(inscripciones.id)" color="primary" type=" button">
+            <mat-icon> delete </mat-icon>
+         </button>
+        </li>
+     </ul>
+
+
+
+</div>
+
+

@@ -23,5 +23,21 @@ export class InscripcionesEffects {
   });
 
 
+  deleteInscripcion$ = createEffect(() => {
+    return this.actions$.pipe(
+
+      ofType(InscripcionesActions.deleteInscripcion),
+      concatMap((action) =>
+        this.inscripcionesService.deleteInscripcionById(action.id).pipe(
+          map(data => InscripcionesActions.deleteInscripcionSuccess({ data: action.id })), 
+          catchError(error => of(InscripcionesActions.deleteInscripcionFailure({ error })))
+ 
+        )
+      )
+    );
+  });
+
+
+
   constructor(private actions$: Actions, private inscripcionesService: InscripcionesServicesService) {}
 }

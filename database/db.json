@@ -37,14 +37,12 @@
       "id": 4
     }
   ],
-
   "courses": [
     {
       "id": 1,
       "subjectId": 1,
       "fechaIni": "2023-06-02T01:27:59.631Z",
       "fechaFin": "2023-08-10T01:27:59.631Z"
-     
     },
     {
       "id": 2,
@@ -52,7 +50,6 @@
       "fechaIni": "2023-06-02T01:27:59.631Z",
       "fechaFin": "2023-08-10T01:27:59.631Z"
     },
-
     {
       "id": 3,
       "subjectId": 3,
@@ -60,47 +57,50 @@
       "fechaFin": "2023-08-10T01:27:59.631Z"
     }
   ],
-
-  "subjects":  [
+  "subjects": [
     {
       "id": 1,
       "nombre": "Angular",
       "description": "Curso de Angular"
-     
     },
     {
       "id": 2,
       "nombre": "Java",
       "description": "Curso de Java"
     },
-
     {
       "id": 3,
       "nombre": "CSS",
       "description": "Curso de CSS"
     }
   ],
-
   "inscription": [
+
     {
       "id": 1,
       "studentId": 1,
       "courseId": 1,
       "subjectId": 1
     },
+
     {
       "id": 2,
       "studentId": 2,
-      "courseId": 3,
-      "subjectId": 2
+      "courseId": 1,
+      "subjectId": 1
     },
     {
       "id": 3,
       "studentId": 2,
       "courseId": 1,
       "subjectId": 1
+    },
+    {
+      "id": 4,
+      "studentId": 1,
+      "courseId": 2,
+      "subjectId": 1
     }
-
   ],
   "students": [
     {
