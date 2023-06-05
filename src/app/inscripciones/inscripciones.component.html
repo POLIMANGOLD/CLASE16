@@ -2,6 +2,9 @@
 
 <div #ifNotLoading>
 
+   <button  (click)="crearInscripcion()" type="button" mat-button>  Crear Inscripcion</button>
+
+
     <ul>
         <li *ngFor="let inscripciones of ( state$ | async )?.inscripciones">
             {{ inscripciones.student.nombre + '  -  ' + inscripciones.subject.nombre + '  -  ' + (inscripciones.course.fechaIni | date:'dd/MM/YYYY')}} 

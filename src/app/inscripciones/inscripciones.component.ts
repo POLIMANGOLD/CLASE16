@@ -7,6 +7,8 @@ import { selectInscripcionesState } from './store/inscripciones.selectors';
 import { State } from './store/inscripciones.reducer';
 import { Inscription } from './models';
 import { MatTableDataSource } from '@angular/material/table';
+import { MatDialog } from '@angular/material/dialog';
+import { InscripcionesDialogComponent } from './component/inscripciones-dialog/inscripciones-dialog.component';
 
 
 
@@ -21,6 +23,7 @@ export class InscripcionesComponent implements OnInit {
 
   constructor (private inscripcionesService: InscripcionesServicesService,
     private store: Store,
+    private matDialog: MatDialog
   
    ) 
     {
@@ -36,6 +39,8 @@ eliminarInscripcionPorId (id: number): void {
   this.store.dispatch (InscripcionesActions.deleteInscripcion ({id}))
 }
 
-
+crearInscripcion (): void{
+this.matDialog.open( InscripcionesDialogComponent)
+}
 
 }

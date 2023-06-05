@@ -9,6 +9,12 @@ import { inscripcionesFeature } from './store/inscripciones.reducer';
 import {  MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
+import { InscripcionesDialogComponent } from './component/inscripciones-dialog/inscripciones-dialog.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog';
+import {MatSelectModule} from '@angular/material/select';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 
@@ -17,7 +23,8 @@ import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
-    InscripcionesComponent
+    InscripcionesComponent,
+    InscripcionesDialogComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +33,11 @@ import { MatButtonModule } from '@angular/material/button';
     StoreModule.forFeature (inscripcionesFeature),
     MatIconModule,
     MatTableModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule,
+    MatDialogModule,
+    MatSelectModule,
+    ReactiveFormsModule
   ]
 })
 export class InscripcionesModule { }

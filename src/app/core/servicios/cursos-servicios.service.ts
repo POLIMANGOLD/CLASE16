@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { BehaviorSubject, Observable, mergeMap, tap } from 'rxjs';
-import { Cursos } from 'src/app/cursos/models';
+import { Cursos, cursoWithSubject } from 'src/app/cursos/models';
 import { AppState } from 'src/app/store';
 
 
@@ -46,5 +46,10 @@ export class CursosServiciosService {
         mergeMap(()=> this.cursos$.asObservable())
   
       )}
+
+
+      obtenerCursosWithSubject(): Observable<cursoWithSubject[]>{
+        return this.httpClient.get<cursoWithSubject[]>('http://localhost:3000/courses?_expand=subject')
+        }
 
 }

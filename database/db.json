@@ -7,7 +7,7 @@
       "email": "paula@mail.com",
       "password": "12345",
       "token": "dsfsdf",
-      "user": "admin"
+      "role": "admin"
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "email": "leo@mail.com",
       "password": "12345",
       "token": "defssdf",
-      "user": "admin"
+      "role": "admin"
     },
     {
       "id": 3,
@@ -25,7 +25,7 @@
       "email": "nico@mail.com",
       "password": "12345",
       "token": "ohihoi",
-      "user": "admin"
+      "role": "admin"
     },
     {
       "nombre": "Amadeo",
@@ -33,7 +33,7 @@
       "email": "franco@mail.com",
       "password": "12345",
       "token": "sdfsdf",
-      "user": "admin",
+      "role": "admin",
       "id": 4
     }
   ],
@@ -75,14 +75,6 @@
     }
   ],
   "inscription": [
-
-    {
-      "id": 1,
-      "studentId": 1,
-      "courseId": 1,
-      "subjectId": 1
-    },
-
     {
       "id": 2,
       "studentId": 2,
@@ -100,6 +92,12 @@
       "studentId": 1,
       "courseId": 2,
       "subjectId": 1
+    },
+    {
+      "studentId": 1,
+      "courseId": 2,
+      "subjectId": 2,
+      "id": 6
     }
   ],
   "students": [

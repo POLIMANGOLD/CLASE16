@@ -1,7 +1,9 @@
 <mat-drawer-container  class="example-container" autosize>
     <mat-drawer #drawer class="example-sidenav" mode="side">
+     
       <mat-nav-list>
-        <a [routerLink]="link.path" mat-list-item *ngFor="let link of links" >{{ link.title }}</a>
+        <p>{{ loginUser?.email }} </p>
+        <a [routerLink]="link.path" mat-list-item  *ngFor="let link of links" >{{ link.title }}</a>
 
         <a (click)="logout()"  mat-list-item> Cerrar Sesion</a>
       </mat-nav-list>

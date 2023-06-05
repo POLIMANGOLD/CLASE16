@@ -1,6 +1,7 @@
 import { createFeature, createReducer, on } from '@ngrx/store';
 import { InscripcionesActions } from './inscripciones.actions';
 import { InscriptionWithAll } from '../models';
+import { state } from '@angular/animations';
 
 
 export const inscripcionesFeatureKey = 'inscripciones';
@@ -70,9 +71,28 @@ on(InscripcionesActions.deleteInscripcionFailure, (state, action) => {
   }
 }
 ),
+
+
+
+on(InscripcionesActions.createInscripcion, (state) => {
+  return{
+    ...state,
+    loading:true,
+  }
+}),
+
+on(InscripcionesActions.createInscripcionSuccess, (state, action) => {
+  const newInscription = action.data;
+  return{
+    ...state,
+    loading: false,
+    inscripciones: [...state.inscripciones,newInscription],
+  
+  }
+}
+),
+
 );
-
-
 export const inscripcionesFeature = createFeature({
   name: inscripcionesFeatureKey,
   reducer,

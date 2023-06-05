@@ -34,7 +34,7 @@ constructor ( private matDialog: MatDialog,
   private alumnosService: AlumnosServiciosService,
   private timeService: TimeService,
   private router: Router){
-    this.alumnosService.obtenerAlumno
+    this.alumnosService.getObtenerAlumno()
     .subscribe ((Alumnos) => {this.dataSource.data = Alumnos})
     this.horaActual$ = this.timeService.reloj; 
   }

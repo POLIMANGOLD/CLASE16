@@ -22,7 +22,7 @@ export interface LoginFormValue {
 })
 export class LoginServicioService {
    
- // private loginUser$ = new BehaviorSubject <Usuario | null >(null);
+//  loginUser$ = new BehaviorSubject <Usuario | null >(null);
 
   constructor(private router: Router,
     private httpClient: HttpClient,
@@ -48,7 +48,7 @@ export class LoginServicioService {
     }
    ).subscribe({
     next: (usuarios) =>{
-      const usuarioAutenticado = usuarios [0];
+       const usuarioAutenticado = usuarios [0];
       if (usuarioAutenticado){
         localStorage.setItem('token', usuarioAutenticado.token)
         this.establecerUsuarioAutenticado (usuarioAutenticado);
