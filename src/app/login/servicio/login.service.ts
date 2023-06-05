@@ -8,6 +8,7 @@ import { AppState } from 'src/app/store';
 import { Store } from '@ngrx/store';
 import { establecerUsuarios } from 'src/app/store/auth/auth.actions';
 import { selectAuthUser } from 'src/app/store/auth/auth.selector';
+import { NavItem } from 'src/app/dashboard/toolbar/nav-item';
 
 
 
@@ -22,7 +23,7 @@ export interface LoginFormValue {
 })
 export class LoginServicioService {
    
-//  loginUser$ = new BehaviorSubject <Usuario | null >(null);
+loginUser$ = new BehaviorSubject <Usuario | null >(null);
 
   constructor(private router: Router,
     private httpClient: HttpClient,
@@ -36,6 +37,12 @@ export class LoginServicioService {
   
   obtenerUsuarioAutenticado() : Observable<Usuario| null > {
     return this.store.select (selectAuthUser);
+  }
+
+
+  getVeryFyRole(link: NavItem): Observable<boolean>{
+    return this.loginUser$.pipe(
+      map((usuarioAuth) => link.allowedRoles.some((r) =>r === usuarioAuth?.role)));
   }
 
   login (formValue: LoginFormValue):void {

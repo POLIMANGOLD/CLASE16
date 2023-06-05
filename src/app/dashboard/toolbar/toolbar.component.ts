@@ -1,10 +1,10 @@
 import { Component, OnDestroy } from '@angular/core';
-import links from './nav-item';
+import links, { NavItem } from './nav-item';
 import { Router } from '@angular/router';
 import { LoginServicioService } from 'src/app/login/servicio/login.service';
 import { AuthState } from 'src/app/store/auth/auth.reducer';
 import { Usuario } from 'src/app/login/models';
-import { Subscription } from 'rxjs';
+import { BehaviorSubject, Observable, Subject, Subscription, map } from 'rxjs';
 
 
 @Component({
@@ -19,7 +19,7 @@ export class ToolbarComponent implements OnDestroy {
 
   suscripcionLoginUser:Subscription | null =null;
 
- loginUser: Usuario | null = null;
+ loginUser: Usuario|null =null;
 
   constructor (
     private router: Router,
@@ -32,8 +32,11 @@ export class ToolbarComponent implements OnDestroy {
   ngOnDestroy(): void {
    this.suscripcionLoginUser?.unsubscribe();
   }
-  
+  loginUser$ = new Subject <Usuario | null >;
 
+  getVeryFyRole(link: NavItem): Observable<Boolean>{
+  return this.loginUser$.pipe(
+  map((usuarioAuth) => link.allowedRoles.some((r) =>r === usuarioAuth?.role)));}
 
   logout (): void {
     this.router.navigate (['login']);

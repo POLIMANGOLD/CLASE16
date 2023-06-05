@@ -2,10 +2,19 @@
     <mat-drawer #drawer class="example-sidenav" mode="side">
      
       <mat-nav-list>
-        <p>{{ loginUser?.email }} </p>
-        <a [routerLink]="link.path" mat-list-item  *ngFor="let link of links" >{{ link.title }}</a>
-
+       <ng-container *ngFor ="let link of links">
+        <a [routerLink]="link.path" 
+        mat-list-item
+        *ngIf="
+        !link.allowedRoles.length || !(getVeryFyRole(link)| async)
+        ">
+        
+        {{ link.title }}
+      </a>
+       </ng-container>
         <a (click)="logout()"  mat-list-item> Cerrar Sesion</a>
+
+    
       </mat-nav-list>
     </mat-drawer>
     
